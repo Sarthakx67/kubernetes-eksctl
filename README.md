@@ -24,9 +24,9 @@ To interact with the EKS cluster, we need a workstation (EC2 instance) configure
     * Helm
     * Git
 
-```bash
+```
 sudo sh workstation.sh
-
+```
 3. We are using Default VPC with allow-all security group.
 4. Configure AWS. this EC2 instance should have access to provision EKS cluster.
 ```
