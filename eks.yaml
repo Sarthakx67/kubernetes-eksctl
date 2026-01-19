@@ -2,16 +2,16 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: eks-spot-cluster
+  name: eks-ultra-cheap
   region: ap-south-1
 
-managedNodeGroups: # this is also completely managed by AWS
-  - name: spot
-    instanceType: m5.large
-    # your K8 node can be anytime taken back by AWS
+managedNodeGroups:
+  - name: spot-micro
+    instanceType: t3.micro #t3.smalll
     spot: true
-    availabilityZones: # ebs static provisioning
-    - ap-south-1b
-    desiredCapacity: 3
-    ssh:
-      publicKeyName: kubernetes # replace this with your keypair exists in AWS.
+    availabilityZones:
+      - ap-south-1b
+    desiredCapacity: 1
+    minSize: 1
+    maxSize: 1
+    volumeSize: 20
