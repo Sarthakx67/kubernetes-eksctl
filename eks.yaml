@@ -2,16 +2,16 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: eks-ultra-cheap
+  name: eks-cluster
   region: ap-south-1
 
 managedNodeGroups:
   - name: spot-micro
-    instanceType: t3.micro #t3.smalll
+    instanceType: t3.large
     spot: true
     availabilityZones:
       - ap-south-1b
-    desiredCapacity: 1
+    desiredCapacity: 2
     minSize: 1
     maxSize: 1
     volumeSize: 20
