@@ -13,5 +13,5 @@ managedNodeGroups:
       - ap-south-1b
     desiredCapacity: 2
     minSize: 1
-    maxSize: 1
+    maxSize: 2
     volumeSize: 20
